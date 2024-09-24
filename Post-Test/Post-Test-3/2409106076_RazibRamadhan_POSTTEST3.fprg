@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106076_RazibRamadhan_POSTTEST3"/>
+        <attribute name="authors" value="IBM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-22 03:34:19 PM"/>
+        <attribute name="created" value="SUJNO1JFTkNDSEk7MjAyNC0wOS0yMjswMzowODo0NiBQTTsyMDEw"/>
+        <attribute name="edited" value="SUJNO1JFTkNDSEk7MjAyNC0wOS0yMjswMzozNDoxOSBQTTsyOzIxMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="beratMg, tinggiKm, beratKg, tinggiMeter, tinggiCm, bmi" type="Real" array="False" size=""/>
+            <declare name="kategori" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan berat badan (mg)!&quot;" newline="True"/>
+            <input variable="beratMg"/>
+            <output expression="&quot;Masukkan tinggi badan (km)!&quot;" newline="True"/>
+            <input variable="tinggiKm"/>
+            <assign variable="beratKg" expression="beratMg / 1000000"/>
+            <assign variable="tinggiMeter" expression="tinggiKm * 1000"/>
+            <assign variable="tinggiCm" expression="tinggiKm * 100000"/>
+            <assign variable="bmi" expression="beratKg / (tinggiMeter ^ 2)"/>
+            <if expression="bmi &lt; 18.5">
+                <then>
+                    <assign variable="kategori" expression="&quot;Berat Badan Kurang (Underweight)&quot;"/>
+                </then>
+                <else>
+                    <if expression="bmi &lt; 24.9">
+                        <then>
+                            <assign variable="kategori" expression="&quot;Berat Badan Normal&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="bmi &lt; 29.9">
+                                <then>
+                                    <assign variable="kategori" expression="&quot;Berat Badan Berlebih (Overweight)&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="kategori" expression="&quot;Obesitas&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Berat Anda: &quot; &amp; beratKg &amp; &quot; kg&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;Tinggi Anda: &quot; &amp; tinggiCm &amp; &quot; cm&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;BMI Anda adalah &quot; &amp; ToFixed(bmi, 2) &amp; &quot; dan Anda termasuk: &quot; &amp; kategori" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
