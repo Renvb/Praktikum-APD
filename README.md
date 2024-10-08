@@ -11,5 +11,5 @@ Selamat datang di repository Praktikum APD! Repository ini berisi materi dan pos
 
 Repository ini terdiri dari beberapa direktori, antara lain:
 
-- **/pertemuan**: Berisi materi pembelajaran yang dilakukan selama pertemuan.
-- **/post-test**: Berisi tugas-tugas yang terdiri tadi flowchart, program, dan laporan.
+- **/Kelas**: Berisi materi pembelajaran yang dilakukan selama pertemuan.
+- **/Post-Test**: Berisi tugas-tugas yang terdiri tadi flowchart, program, dan laporan.
